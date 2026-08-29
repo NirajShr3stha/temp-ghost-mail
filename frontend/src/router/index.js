@@ -18,9 +18,12 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
-            alias: '/:lang/',
-            component: Index
+          path: '/',
+          redirect: '/en',
+        },
+        {
+          path: '/:lang/',
+          component: Index,
         },
         {
             path: '/user',
